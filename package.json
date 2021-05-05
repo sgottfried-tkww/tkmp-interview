@@ -1,0 +1,22 @@
+{
+  "name": "@tkmp-interview/root",
+  "version": "1.0.0",
+  "description": "An Application to be used for interviews",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "app"
+  ],
+  "scripts": {
+    "start": "node ./start.js && concurrently \"yarn server:start\" \"yarn app:start\"",
+    "server:start": "yarn workspace @tkmp-interview/server start",
+    "util:watch": "yarn workspace @tkmp-interview/util watch",
+    "app:start": "yarn workspace @tkmp-interview/app start"
+  },
+  "author": "TKMP Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "concurrently": "^6.0.2",
+    "rimraf": "^3.0.2"
+  }
+}

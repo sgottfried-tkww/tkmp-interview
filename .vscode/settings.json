@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    ".atomignore": true,
+    ".gitignore": true,
+    ".vscode": true,
+    "**/node_modules/**": true,
+    "**/package.json": true,
+    "app/craco.config.js": true,
+    "app/public": true,
+    "app/src/react-app-env.d.ts": true,
+    "app/tsconfig.json": true,
+    "assets": true,
+    "packages": true,
+    "start.js": true,
+    "yarn.lock": true
+  }
+}

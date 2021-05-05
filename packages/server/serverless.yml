@@ -1,0 +1,20 @@
+service: tkmp-interview
+frameworkVersion: '2'
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  flipper:
+    handler: handler.flipper
+    events:
+      - http: 
+          path: flipper/{experimentId}
+          method: get
+custom:
+  serverless-offline:
+    httpPort: 3600
